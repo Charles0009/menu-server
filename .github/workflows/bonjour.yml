@@ -6,28 +6,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - run: ls -l 
-     
-- name: output the message on actions result
-      uses: Code-Hex/neo-cowsay-action@v1
-      with:
-        message: | # Support multi-lines
-          cat README.md
-    - name: cowsay on the comment
-      uses: Code-Hex/neo-cowsay-action@v1
-      with:
-        message: 'Hello, World with random'
-        cow: 'random' # If specified, it shows random ascii art.
-        cowsay_on_comment: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: output pipeline
-      id: cowsay_output_id # You want id
-      uses: Code-Hex/neo-cowsay-action@v1
-      with:
-        message: 'Hello, World'
-        cow: 'gopher' # ascii art list: https://github.com/Code-Hex/Neo-cowsay/tree/master/cows
-        cowsay_to_output: 'cowsay'
-    - name: print output
-      run: |
-        echo "${{ steps.cowsay_output_id.outputs.cowsay }}"
+      - run: ls -l
+      - run: sudo apt-get install cowsay  
+      - run: cat README.md | cowsay
+ 
