@@ -10,3 +10,13 @@ jobs:
       - run: sudo apt-get install cowsay  
       - run: cat README.md | cowsay
  
+    container:
+      image: ghcr.io/cicd-lectures/gitpod:latest
+      options: --user root
+      env:
+        NODE_ENV: development
+      ports:
+        - 80
+      volumes:
+        - my_docker_volume:/volume_mount
+    
