@@ -1,7 +1,7 @@
 on:
   push:
     tags:
-    - 'vitevite' 
+    - 'v0.0.1' 
 
 name: CD
 
