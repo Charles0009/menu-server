@@ -7,13 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: ls -l
-      - run: sudo apt-get install cowsay  
-      - run: cat README.md | cowsay
-      - run: mvn verify
+      - run: mvn --batch-mode --update-snapshots verify
  
-    container:
-      image: ghcr.io/cicd-lectures/gitpod:latest
-      options: --user root
-      
      
     
