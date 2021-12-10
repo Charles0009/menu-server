@@ -10,11 +10,6 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: '11'
-      - run: mkdir -p artifact
-      - run: echo hello > artifact/world.txt
-      - uses: actions/upload-artifact@v2
-        with:
-          name: my-artifact
-          path: artifact/world.txt
+          
       - name: Run the Maven verify phase
-        run: mvn --batch-mode --update-snapshots verify
+        run: mvn verify
