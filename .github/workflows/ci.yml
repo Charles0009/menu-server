@@ -10,6 +10,11 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: '11'
-          
+      
       - name: Run the Maven verify phase
-        run: mvn verify
+        run: mvn  verify
+      
+      - uses: actions/upload-artifact@v2
+        with:
+          name: menu-server
+          path: target/menu-server.jar
