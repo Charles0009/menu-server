@@ -20,7 +20,7 @@ jobs:
         with:
           name: menu-server
           path: target/menu-server.jar
-  
+
 
 
 
@@ -33,7 +33,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: menu-server
-          path: ./releaseAsset/menu-server.jar
+          path: ./releaseAsset/
 
       - name: Create Release
         id: create_release
