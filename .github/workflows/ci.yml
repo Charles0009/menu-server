@@ -16,3 +16,5 @@ jobs:
         with:
           name: my-artifact
           path: artifact/world.txt
+      - name: Run the Maven verify phase
+        run: mvn --batch-mode --update-snapshots verify
