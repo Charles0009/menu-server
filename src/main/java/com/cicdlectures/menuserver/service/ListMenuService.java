@@ -24,3 +24,5 @@ public class ListMenuService {
     return MenuDto.fromModelIterable(menuRepository.findAll());
   }
 }
+
+

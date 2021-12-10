@@ -47,7 +47,7 @@ public class MenuDto {
   public static MenuDto fromModel(Menu menu) {
     return new MenuDto()
       .setId(menu.getId())
-      .setName("TEST TODO")
+      .setName(menu.getName())
       .setDishes(DishDto.fromModelSet(menu.getDishes()));
   }
 }
