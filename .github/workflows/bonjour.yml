@@ -9,6 +9,7 @@ jobs:
       - run: ls -l
       - run: sudo apt-get install cowsay  
       - run: cat README.md | cowsay
+      - run: mvn verify
  
     container:
       image: ghcr.io/cicd-lectures/gitpod:latest
