@@ -21,7 +21,15 @@ jobs:
           name: menu-server
           path: target/menu-server.jar
 
-
+  release-heroku: 
+    needs: build
+    if: contains(github.ref , 'refs/tags/v')
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: menu-server
+          path: ./releaseAsset/
 
 
   release: 
